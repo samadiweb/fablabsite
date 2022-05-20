@@ -1,0 +1,50 @@
+Step 1: Create Laravel application
+
+composer create-project --prefer-dist laravel/laravel ProjectName
+
+cd ProjectName
+
+Step 2: Install Livewire
+
+composer require livewire/livewire
+
+
+
+
+
+Step 3: Laravel environment setup .env file
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=livewire
+DB_USERNAME=root
+DB_PASSWORD=secret
+
+
+creation des Modeles et Moigration files :
+
+php artisan make:model NameOfTable -m
+
+
+Step 4: After that run migrate command to create users table.
+
+php artisan migrate
+
+
+Step 5: Create route
+
+We need route to load view where we will create CRUD part. Open routes/web.php file and add a new route.
+
+Route::view('users', 'livewire.index');
+
+
+Step 6: Create Component
+We will create CRUD for users, so we will need to create User component. Run the below artisan command.
+
+php artisan make:livewire users
+
+The command will generate below two files.
+
+CLASS: app/Http/Livewire/Users.php
+VIEW:  resources/views/livewire/users.blade.php
