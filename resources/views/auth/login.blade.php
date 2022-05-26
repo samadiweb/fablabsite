@@ -96,15 +96,16 @@
 
         <div class="collapse navbar-collapse" id="navbarmain">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+          <li class="nav-item active">
               <a class="nav-link" href="{{route('frontend.home')}}">Accueil</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{{route('frontend.services')}}">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.presentation')}}">Présentation</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.machines')}}">Machines</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.projects')}}">Projets</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.formations')}}">Formations</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.portfolios')}}">Portfolios</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.contact')}}">Contact</a></li>
 
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contacter Nous</a></li>
 
 
 

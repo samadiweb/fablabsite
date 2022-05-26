@@ -28,7 +28,7 @@
                 <div class="col-12">
 
                     <div class="card">
-                    <div class="card-header">
+                        <div class="card-header">
                             <h3 class="card-title">Liste des Machines</h3>
 
                             <div class="card-tools">
@@ -48,83 +48,83 @@
                             @endif
 
                         </div>
-               
-                    <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
-                        <table class="table table-hover text-nowrap">
-                            <thead>
 
-                                <tr>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
 
-                                    <th>ID</th>
-                                    <th>Image</th>
-                                    <th>Nom</th>
-                                    <th>Lien Wiki</th>
-                                    <th>Actions</th>
+                                    <tr>
 
-                                </tr>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Nom</th>
+                                        <th>Lien Wiki</th>
+                                        <th>Actions</th>
 
-
+                                    </tr>
 
 
-                            </thead>
-                            <tbody>
 
-                                @foreach ($items as $item)
 
-                                <tr>
-                                    <td>{{$item->id}}</td>
-                                    <td><img src="{{ asset('assets/images/machines') }}/{{$item->image}}" width="60" alt="{{$item->nom}}"></td>
+                                </thead>
+                                <tbody>
 
-                                    <td><a href="{{route('backend.machines.show',['id_machine'=>$item->id])}}">{{$item->nom}}</a></td>
-                                    <td>
-                                        <a href="{{$item->lien_wiki}}">{{$item->lien_wiki}}</a>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">Actions </button>
+                                    @foreach ($items as $item)
 
-                                            <div class="dropdown-menu" role="menu">
-                                                <a class="dropdown-item" href="{{route('backend.machines.show',['id_machine'=>$item->id])}}"> <i class="fas fa-folder">
-                                                    </i>
-                                                    Consulter</a>
-                                                <a href="{{route('backend.machines.edit',['id_machine'=>$item->id])}}" class="dropdown-item"> <i class="fas fa-pencil-alt">
-                                                    </i>
-                                                    Modifier</a>
+                                    <tr>
+                                        <td>{{$item->id}}</td>
+                                        <td><img src="{{ asset('assets/images/machines') }}/{{$item->image}}" width="60" alt="{{$item->nom}}"></td>
 
-                                                <a class="dropdown-item" href="#" onclick="confirm('Voulez Vous vraiment supprimer cet machine ?')|| event.stopImmediatePropagation()" wire:click.prevent="deleteMachine({{$item->id}})">
-                                                    <i class="fas fa-trash">
-                                                    </i>
-                                                    Supprimer</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Réservations</a>
+                                        <td><a href="{{route('backend.machines.show',['id_machine'=>$item->id])}}">{{$item->nom}}</a></td>
+                                        <td>
+                                            <a href="{{$item->lien_wiki}}">{{$item->lien_wiki}}</a>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">Actions </button>
+
+                                                <div class="dropdown-menu" role="menu">
+                                                    <a class="dropdown-item" href="{{route('backend.machines.show',['id_machine'=>$item->id])}}"> <i class="fas fa-folder">
+                                                        </i>
+                                                        Consulter</a>
+                                                    <a href="{{route('backend.machines.edit',['id_machine'=>$item->id])}}" class="dropdown-item"> <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Modifier</a>
+
+                                                    <a class="dropdown-item" href="#" onclick="confirm('Voulez Vous vraiment supprimer cet machine ?')|| event.stopImmediatePropagation()" wire:click.prevent="deleteMachine({{$item->id}})">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Supprimer</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Réservations</a>
+                                                </div>
                                             </div>
-                                        </div>
 
 
 
-                                    </td>
-                                </tr>
-                                @endforeach
+                                        </td>
+                                    </tr>
+                                    @endforeach
 
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+
+
                     </div>
-                    <!-- /.card-body -->
+                    <div class="d-flex justify-content-center flex-nowrap">
 
+                        {{$items->links()}}
 
-                </div>
-                <div class="d-flex justify-content-center flex-nowrap">
-
-                    {{$items->links()}}
+                    </div>
 
                 </div>
-
             </div>
-        </div>
-        <!-- /.row -->
-    </div><!-- /.container-fluid -->
-</div>
-<!-- /.content -->
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
 </div>

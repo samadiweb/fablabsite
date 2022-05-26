@@ -11,7 +11,7 @@ class Reservation extends Model
 
     protected $table = "reservations";
 
-    protected $fillable = ['machine_id','project_id','adherent_id','date_reservation','date_seance','numero_seance','notes'];
+    protected $fillable = ['machine_id','project_id','adherent_id','project','date_reservation','date_seance','numero_seance','notes'];
 
     public function adherent()
     {

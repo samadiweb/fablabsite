@@ -1,3 +1,4 @@
+<div>
 <section class="page-title bg-1">
   <div class="overlay"></div>
   <div class="container">
@@ -52,3 +53,4 @@
 		</div>
 	</div>
 </section>
+</div>

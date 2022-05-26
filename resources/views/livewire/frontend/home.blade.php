@@ -1,3 +1,4 @@
+<div>
 <!-- Slider Start -->
 <section class="banner">
   <div class="container">
@@ -10,7 +11,7 @@
 
           <p class="mb-4 pr-5">Un autre Texte.</p>
           <div class="btn-container ">
-            <a href="appoinment.html" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">S'inscrir <i class="icofont-simple-right ml-2  "></i></a>
+            <a href="{{route('register')}}" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">S'inscrir <i class="icofont-simple-right ml-2  "></i></a>
           </div>
         </div>
       </div>
@@ -27,8 +28,8 @@
               <i class="icofont-surgeon-alt"></i>
             </div>
             <span>Du mardi au Vendredi - 10h-18h</span>
-            <h4 class="mb-3">Online Appoinment</h4>
-            <p class="mb-4">Get ALl time support for emergency.We have introduced the principle of family medicine.</p>
+            <h4 class="mb-3">Réservation En ligne</h4>
+            <p class="mb-4">Un autre Text</p>
             <a href="{{route('frontend.machines')}}" class="btn btn-main btn-round-full">Réserver Une Machine </a>
           </div>
 
@@ -85,7 +86,7 @@
           <h3 class="title-color">LE FABLAB VOUS ACCOMPAGNE.</h3>
           <p class="mt-4 mb-5">LE FABLAB VOUS ACCOMPAGNE POUR RÉALISER VOS PROJETS + Petit presentation de Fablab</p>
 
-          <a href="{{route('frontend.services')}}" class="btn btn-main-2 btn-round-full btn-icon">Nos Services<i class="icofont-simple-right ml-3"></i></a>
+          <a href="{{route('frontend.machines')}}" class="btn btn-main-2 btn-round-full btn-icon">Nos Machines<i class="icofont-simple-right ml-3"></i></a>
         </div>
       </div>
     </div>
@@ -218,7 +219,9 @@
     </div>
   </div>
 </section> -->
-<section class="section appoinment">
+
+<!-- 
+  <section class="section appoinment">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 ">
@@ -294,7 +297,8 @@
       </div>
     </div>
   </div>
-</section>
+</section> 
+-->
 
 <!-- <section class="section testimonial-2 gray-bg">
   <div class="container">
@@ -462,3 +466,5 @@
     </div>
   </div>
 </section> -->
+
+</div>

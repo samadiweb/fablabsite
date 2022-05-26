@@ -1,3 +1,4 @@
+<div>
 <section class="page-title bg-1">
   <div class="overlay"></div>
   <div class="container">
@@ -5,7 +6,7 @@
       <div class="col-md-12">
         <div class="block text-center">
           <span class="text-white">Cohabit Fablab</span>
-          <h1 class="text-capitalize mb-5 text-lg">Nos Services</h1>
+          <h1 class="text-capitalize mb-5 text-lg">Présentation</h1>
 
           <!-- <ul class="list-inline breadcumb-nav">
             <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
@@ -16,6 +17,34 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="section about-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h2 class="title-color">Coh@bit - Fablab</h2>
+			</div>
+			<div class="col-lg-8">
+				<p> Présentation Fablab <br> Texte de presentation Texte de presentationTexte de presentationTexte de presentationTexte de presentationTexte de presentation</p>
+				<img src="{{ asset('assets/front/images/logo.png')}}" alt="" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section cta-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="cta-content">
+					<div class="divider mb-4"></div>
+					<h2 class="mb-5 text-lg">Nous sommes heureux de vous offrir <br><span class="title-color">la chance de travailler avec nous</span></h2>
+					<a href="" class="btn btn-main-2 btn-round-full">S'inscrir<i class="icofont-simple-right  ml-2"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section class="section service-2">
@@ -54,16 +83,4 @@
 		</div>
 	</div>
 </section>
-<section class="section cta-page">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7">
-				<div class="cta-content">
-					<div class="divider mb-4"></div>
-					<h2 class="mb-5 text-lg">Nous sommes heureux de vous offrir <br><span class="title-color">la chance de travailler avec nous</span></h2>
-					<a href="" class="btn btn-main-2 btn-round-full">S'inscrir<i class="icofont-simple-right  ml-2"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+</div>

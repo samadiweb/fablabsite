@@ -99,12 +99,12 @@
             <li class="nav-item active">
               <a class="nav-link" href="{{route('frontend.home')}}">Accueil</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{{route('frontend.services')}}">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.presentation')}}">Présentation</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.machines')}}">Machines</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.projects')}}">Projets</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.formations')}}">Formations</a></li>
-
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contacter Nous</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.portfolios')}}">Portfolios</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('frontend.contact')}}">Contact</a></li>
 
 
 
@@ -130,12 +130,12 @@
             <div class="logo mb-4">
               <img src="{{ asset('assets/front/images/logo.png')}}" alt="" class="img-fluid">
             </div>
-            <p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
+            <p>Un Text</p>
 
             <ul class="list-inline footer-socials mt-4">
-              <li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a></li>
-              <li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="icofont-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="icofont-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="https://twitter.com/"><i class="icofont-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.pinterest.com//"><i class="icofont-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -149,7 +149,7 @@
               <li><a href="{{route('frontend.machines')}}">Machines </a></li>
               <li><a href="{{route('frontend.formations')}}">Formations</a></li>
               <li><a href="{{route('frontend.projects')}}">Projets</a></li>
-              <li><a href="#">Portfolios</a></li>
+              <li><a href="{{route('frontend.portfolios')}}">Portfolios</a></li>
             </ul>
           </div>
         </div>

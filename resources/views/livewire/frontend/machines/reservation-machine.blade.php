@@ -1,3 +1,14 @@
+<style>
+	table {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+</style>
+<div>
 <section class="page-title bg-1">
 	<div class="overlay"></div>
 	<div class="container">
@@ -7,11 +18,6 @@
 					<span class="text-white">Cohabit - Fablab</span>
 					<h1 class="text-capitalize mb-5 text-lg">Détails Machine</h1>
 
-					<!-- <ul class="list-inline breadcumb-nav">
-            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">/</span></li>
-            <li class="list-inline-item"><a href="#" class="text-white-50">Our services</a></li>
-          </ul> -->
 				</div>
 			</div>
 		</div>
@@ -44,28 +50,23 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-<section class="contact-form-wrap section">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
 					<h2 class="text-md mb-2">Table de Réservation</h2>
-					<div class="divider mx-auto my-4">en cours de préparation</div>
-
-				</div>
+									</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
-				Projet de réservation : <input type="text" size="50">
+				Projet de réservation : <input wire:model="project" type="text" size="50">
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<table class="table table-bordered">
 					<thead>
 						<tr style="background-color: #B9D210;">
-							<th>Jour/Hauraire</th>
+							<th>Jour/Horaire</th>
 							<th>10h00-11h00</th>
 							<th>11h00-12h00</th>
 							<th>12h00-13h00</th>
@@ -79,31 +80,43 @@
 					<tbody>
 						@foreach($reservation_array as $reserve)
 
-						<tr>
-						<td style="background-color:#B9D210;">
-					{{	$reserve['date']}}
-								</td>
+						<tr wire:key="{{ $loop->index }}">
+							<td style="background-color:#B9D210;">
+								{{ $reserve['date']}}
+							</td>
 							@foreach($reserve['seances'] as $seance)
 
-							<td style="background-color:green;" wire:click="selectSeance()">
-							{{$seance['color']}}
+							@if($seance['disponible']==true)
+							<td  >
+								<button wire:click.prevent="test" type="button" class="btn btn-success btn-sm">Réserver</button>
 							</td>
+							@else
+							<td style="background-color:{{$seance['color']}}" wire:click="selectSeance()">
+							{{$seance['date']}} - {{$seance['time']}}
+							</td>
+							@endif
 							@endforeach
 
 						</tr>
 
-						@endforeach
+						@endforeach 
 					</tbody>
 				</table>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
-				<button>Valider la réservation</button>
+				Notes : <input wire:model="notes_reservation" value="{{$notes_reservation}}" type="text" size="50">
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 mb-2">
+				<button wire:click.prevent="test" type="button" class="btn btn-info" >Valider la réservation</button>
 			</div>
 			<div>
-	<?php		
-//print_r($reservation_array);
-?>
+				<?php
+				//print_r($reservation_array);
+				?>
 			</div>
 		</div>
 	</div>
 </section>
+
+
+</div>

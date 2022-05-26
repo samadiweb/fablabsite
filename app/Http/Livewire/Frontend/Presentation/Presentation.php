@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Frontend\Services;
+namespace App\Http\Livewire\Frontend\Presentation;
 
-use App\Models\Machine;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ListServices extends Component
+class Presentation extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
@@ -16,7 +15,7 @@ class ListServices extends Component
     public function render()
     {
         //$items = Machine::paginate(10);
-        return view('livewire.frontend.services.list-services')->layout('layouts.frontend.site');
+        return view('livewire.frontend.presentation.presentation')->layout('layouts.frontend.site');
     } 
 
    

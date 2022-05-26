@@ -36,26 +36,32 @@ use App\Http\Livewire\Frontend\Home;
 
 // Home Routes
 Route::get('/', Home::class)->name('frontend.home');
-
-Route::get('/services', App\Http\Livewire\Frontend\Services\ListServices::class)->name('frontend.services');
+Route::get('/presentation', App\Http\Livewire\Frontend\Presentation\Presentation::class)->name('frontend.presentation');
+Route::get('/portfolios', App\Http\Livewire\Frontend\Portfolios\ListPortfolios::class)->name('frontend.portfolios');
 Route::get('/machines', App\Http\Livewire\Frontend\Machines\ListMachines::class)->name('frontend.machines');
 Route::get('/projects', App\Http\Livewire\Frontend\Projects\ListProjects::class)->name('frontend.projects');
 Route::get('/formations', App\Http\Livewire\Frontend\Formations\ListFormations::class)->name('frontend.formations');
 
-
+Route::get('/contact', App\Http\Livewire\Frontend\Contacts\Contact::class)->name('frontend.contact');
 
 
 /******  BackEnd  Admin App ******/
 
 
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', 'authadmin'])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', 'auth_user'])->group(function () {
 
-/******  Front End  ******/
-    Route::get('/machines/{id_machine}/reservation', App\Http\Livewire\Frontend\Machines\ReservationMachine::class)->name('frontend.machines.reservation');
+    /******  Front End  ******/
+        Route::get('/machines/{id_machine}/reservation', App\Http\Livewire\Frontend\Machines\ReservationMachine::class)->name('frontend.machines.reservation');
+    
+    Route::get('/formations/{id_formation}/inscription', App\Http\Livewire\Frontend\Formations\InscriptionFormation::class)->name('frontend.formations.inscription');
+    
+});
 
-Route::get('/formations/{id_formation}/inscription', App\Http\Livewire\Frontend\Formations\InscriptionFormation::class)->name('frontend.formations.inscription');
+
+/******  BackEnd  Admin App ******/
 
 
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', 'auth_admin'])->group(function () {
 
     // Dashboard Routes
     Route::get('/backend', Dashboard::class)->name('backend.dashboard');

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class AuthAdmin
+class AuthUser
 {
     /**
      * Handle an incoming request.
@@ -17,10 +17,9 @@ class AuthAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->user_type == "admin") {
+        if (Auth::user() && Auth::user()->user_type == "user") {
             return $next($request);
-        }
-        else{
+        }else{
 
             session()->flush();
             return redirect()->route('login');
